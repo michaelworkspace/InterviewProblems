@@ -22,14 +22,13 @@ def alphapetize(word: str) -> str:
     """Returns a sorted string with capital letters in front of it's lowercase counterparts."""
 
     sorted_word = sorted(word)
-
-    cap_letters = []
+    cap_letters = [letter for letter in sorted_word if letter.isupper()]
     lower_word = sorted(word.lower())
     new_word = []
 
-    for letter in sorted_word:
-        if letter.isupper():
-            cap_letters.append(letter)
+    # for letter in sorted_word:
+    #     if letter.isupper():
+    #         cap_letters.append(letter)
 
     for letter in lower_word:
         if letter.upper() in cap_letters:
